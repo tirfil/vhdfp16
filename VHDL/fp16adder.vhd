@@ -1,7 +1,7 @@
 --###############################
 --# Project Name : 
 --# File         : 
---# Author       : 
+--# Author       : Philippe THIRION <https://github.com/tirfil>
 --# Description  : 
 --# Modification History
 --#
