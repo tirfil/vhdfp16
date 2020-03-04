@@ -25,5 +25,5 @@ Python programs availables for generating testbench files used by TextIO.
 
 Refinement should be possible to reduce clock cycles or pipelining.
 
-testbench comparison sometime failed due to unavoidable precision error:
+testbench comparison sometime fails due to unavoidable precision error:
 compare input and output file for checking (using a diff tool)
