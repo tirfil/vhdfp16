@@ -18,6 +18,7 @@ Simple interface for adder or multiplier:
 | OUT0 | OUT/16 | Result |
 | START | IN | Start operation |
 | DONE | OUT | Result is available |
+| CLRACC | IN | Clear accumulator |
 
 Notes: 
 -----
