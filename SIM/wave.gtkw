@@ -1,0 +1,29 @@
+[*]
+[*] GTKWave Analyzer v3.3.68 (w)1999-2016 BSI
+[*] Tue Mar 03 13:01:43 2020
+[*]
+[dumpfile] "D:\Users\thirion2\Documents\FPGA\FP16\SIM\tb_fp16adder.ghw"
+[dumpfile_mtime] "Tue Mar 03 12:58:20 2020"
+[dumpfile_size] 1720
+[savefile] "D:\Users\thirion2\Documents\FPGA\FP16\SIM\wave.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] 317 93
+*-28.245598 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.tb_fp16adder.
+[sst_width] 197
+[signals_width] 110
+[sst_expanded] 1
+[sst_vpaned_height] 153
+@28
+top.tb_fp16adder.nrst
+top.tb_fp16adder.mclk
+top.tb_fp16adder.start
+top.tb_fp16adder.done
+@22
+#{top.tb_fp16adder.in1[15:0]} top.tb_fp16adder.in1[15] top.tb_fp16adder.in1[14] top.tb_fp16adder.in1[13] top.tb_fp16adder.in1[12] top.tb_fp16adder.in1[11] top.tb_fp16adder.in1[10] top.tb_fp16adder.in1[9] top.tb_fp16adder.in1[8] top.tb_fp16adder.in1[7] top.tb_fp16adder.in1[6] top.tb_fp16adder.in1[5] top.tb_fp16adder.in1[4] top.tb_fp16adder.in1[3] top.tb_fp16adder.in1[2] top.tb_fp16adder.in1[1] top.tb_fp16adder.in1[0]
+#{top.tb_fp16adder.in2[15:0]} top.tb_fp16adder.in2[15] top.tb_fp16adder.in2[14] top.tb_fp16adder.in2[13] top.tb_fp16adder.in2[12] top.tb_fp16adder.in2[11] top.tb_fp16adder.in2[10] top.tb_fp16adder.in2[9] top.tb_fp16adder.in2[8] top.tb_fp16adder.in2[7] top.tb_fp16adder.in2[6] top.tb_fp16adder.in2[5] top.tb_fp16adder.in2[4] top.tb_fp16adder.in2[3] top.tb_fp16adder.in2[2] top.tb_fp16adder.in2[1] top.tb_fp16adder.in2[0]
+#{top.tb_fp16adder.out0[15:0]} top.tb_fp16adder.out0[15] top.tb_fp16adder.out0[14] top.tb_fp16adder.out0[13] top.tb_fp16adder.out0[12] top.tb_fp16adder.out0[11] top.tb_fp16adder.out0[10] top.tb_fp16adder.out0[9] top.tb_fp16adder.out0[8] top.tb_fp16adder.out0[7] top.tb_fp16adder.out0[6] top.tb_fp16adder.out0[5] top.tb_fp16adder.out0[4] top.tb_fp16adder.out0[3] top.tb_fp16adder.out0[2] top.tb_fp16adder.out0[1] top.tb_fp16adder.out0[0]
+[pattern_trace] 1
+[pattern_trace] 0

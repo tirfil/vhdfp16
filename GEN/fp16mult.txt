@@ -1,0 +1,9 @@
+entity fp16mult
+clock MCLK
+reset nRST
+in IN1 16
+in IN2 16
+out OUT0 16
+in START
+out DONE
+architecture rtl
