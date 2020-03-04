@@ -1,0 +1,11 @@
+entity fp16multacc
+clock MCLK
+reset nRST
+in IN1 16
+in IN2 16
+out OUT0 16
+in START
+out DONE
+in CLRACC
+architecture struct
+
