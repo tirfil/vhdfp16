@@ -27,3 +27,28 @@ Refinement should be possible to reduce clock cycles or pipelining.
 
 testbench comparison sometime fails due to unavoidable precision error:
 compare input and output file for checking (using a diff tool)
+
+# multiplier - accumulator 
+
+Target: Intel MAX10 
+-------------------
+
+*Flow Status	Successful - Wed Mar 04 16:30:05 2020</br>*
+*Quartus Prime Version	17.0.0 Build 595 04/25/2017 SJ Lite Edition</br>*
+*Revision Name	fp16multacc</br>*
+*Top-level Entity Name	fp16multacc</br>*
+*Family	MAX 10</br>*
+*Device	10M08SCE144A7G</br>*
+*Timing Models	Final</br>*
+*Total logic elements	__428__ / 8,064 ( 5 % )</br>*
+*Total registers	198</br>*
+*Total pins	53 / 101 ( 52 % )</br>*
+*Total virtual pins	0</br>*
+*Total memory bits	0 / 387,072 ( 0 % )</br>*
+*Embedded Multiplier 9-bit elements	__2__ / 48 ( 4 % )</br>*
+*Total PLLs	0 / 1 ( 0 % )</br>*
+*UFM blocks	0 / 1 ( 0 % )</br>*
+*ADC blocks	0</br>*
+
+[<img src="https://raw.githubusercontent.com/tirfil/vhdfp16/master/IMAGE/fp16mulacc.jpg">](https://raw.githubusercontent.com/tirfil/vhdfp16/master/IMAGE/fp16mulacc.jpg)]
+
