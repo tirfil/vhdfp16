@@ -32,21 +32,9 @@ signal X1,X2,X3 : unsigned(4 downto 0);
 signal S1,S2,S3	: std_logic;
 signal dif : unsigned(4 downto 0);
 signal i : integer range 0 to 15;
-
-function to_left(vec : unsigned) return integer is
-variable I : integer range 10 downto 0;
-begin
-	I := 0;
-	while vec(vec'left - I)='0' and I/=vec'left loop
-		I:= I+1;
-	end loop;
-	return I;
-end function;
-
 begin
 
 	P_OTO: process(MCLK, nRST)
-	variable value : integer range 0 to 10;
 	begin
 		if (nRST = '0') then
 			DONE <= '0';
@@ -131,29 +119,18 @@ begin
 			elsif (state = S_31) then
 				if (M3(10) = '1') then
 					state <= S_4;
-				elsif M3(10 downto 0) = "00000000000" then
+				elsif (i = mantissa) then -- zero
 					X3 <= (others=>'0');
 					S3 <= '0';
+					--report "Zero";
 					state <= S_4;
 				else
-					value := to_left(M3(10 downto 0));
-					--report integer'image(to_integer(M3));
-					M3 <= shift_left(M3,value);
-					X3 <= X3 - value;
-					state <= S_4;
-				--elsif (i = mantissa) then -- zero
-					--X3 <= (others=>'0');
-					--S3 <= '0';
-					----report "Zero";
-					--state <= S_4;
-				--else
-					--M3 <= shift_left(M3,1);
-					--X3 <= X3 - 1;
-					--state <= S_31;
-					--i <= i+1;
+					M3 <= shift_left(M3,1);
+					X3 <= X3 - 1;
+					state <= S_31;
+					i <= i+1;
 				end if;
 			elsif (state = S_4) then
-				--report integer'image(to_integer(M3));
 				OUT0 <= S3 & std_logic_vector(X3) & std_logic_vector(M3(9 downto 0));
 				DONE <= '1';
 				state <= S_IDLE;
