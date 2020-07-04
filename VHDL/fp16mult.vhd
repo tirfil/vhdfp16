@@ -27,10 +27,12 @@ architecture rtl of fp16mult is
 constant mantissa : integer := 12;
 type state_t is (S_IDLE,S_0,S_1,S_2);
 signal state : state_t;
-signal M1,M2,M3 : unsigned(10 downto 0);
+--signal M1,M2,M3 : unsigned(10 downto 0);
+signal M1,M2 : unsigned(10 downto 0);
 signal X1,X2,X3 : unsigned(4 downto 0);
 signal S1,S2,S3	: std_logic;
 signal MR : unsigned(21 downto 0);
+signal zero : std_logic;
 --signal i : integer range 0 to 15;
 
 function to_left(vec : unsigned) return integer is
@@ -54,6 +56,7 @@ begin
 			--M3 <= (others=>'0');
 			X3 <= (others=>'0');
 			S3 <= '0';
+			zero <= '0';
 		elsif (MCLK'event and MCLK = '1') then
 			if (state = S_IDLE) then
 				DONE <= '0';
@@ -61,12 +64,19 @@ begin
 				--M3 <= (others=>'0');
 				X3 <= (others=>'0');
 				S3 <= '0';
+				zero <= '0';
 				if (START='1') then
 					state <= S_0;
 					M1(9 downto 0) <= unsigned(IN1(9 downto 0));
 					M1(10) <= '1';
+					if (IN1 = x"0000") then
+						zero <= '1';
+					end if;
 					M2(9 downto 0) <= unsigned(IN2(9 downto 0));
 					M2(10) <= '1';
+					if (IN2 = x"0000") then
+						zero <= '1';
+					end if;					
 					X1 <= unsigned(IN1(14 downto 10));
 					X2 <= unsigned(IN2(14 downto 10));
 					S1 <= IN1(15);
@@ -107,7 +117,11 @@ begin
 				end if;
 			elsif ( state = S_2 ) then
 				--OUT0 <= S3 & std_logic_vector(X3) & std_logic_vector(M3(9 downto 0));
-				OUT0 <= S3 & std_logic_vector(X3) & std_logic_vector(MR(20 downto 11));
+				if (zero = '1') then
+					OUT0 <= (others=>'0');
+				else
+					OUT0 <= S3 & std_logic_vector(X3) & std_logic_vector(MR(20 downto 11));
+				end if;
 				DONE <= '1';
 				state <= S_IDLE;
 			end if;
