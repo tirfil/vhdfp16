@@ -31,7 +31,7 @@ signal state : state_t;
 signal M1,M2,M3 : unsigned(11 downto 0);
 signal X1,X2,X3 : unsigned(4 downto 0);
 signal S1,S2,S3	: std_logic;
-signal i : integer range 0 to 15;
+--signal i : integer range 0 to 15;
 
 function to_left(vec : unsigned) return integer is
 variable I : integer range 10 downto 0;
