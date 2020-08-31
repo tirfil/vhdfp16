@@ -1,6 +1,20 @@
 # vhdfp16
 FP16 Half precision floating point (IEEE754 2008) adder + multiplier
 
+# VERSION 2.
+
+adder + mult
+
+sequential version (state machine) and pipeline version
+
+fix issue (process correctly infinity and zero)
+
+discrease delay in adder from 7 to 5 cycle clock.
+
+mantissa +/- 1 LSB relative to standard.(i.e not strictly conform to IEEE754 rounding rules)
+
+=================================================================================
+
 |                   |                |
 | ----------------- | -------------- |
 | sign : 1 bit      |  (15)          |
