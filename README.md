@@ -11,7 +11,11 @@ fix issue (process correctly infinity and zero)
 
 discrease delay in adder from 7 to 5 cycle clock.
 
-mantissa +/- 1 LSB relative to standard.(i.e not strictly conform to IEEE754 rounding rules)
+Not conform to IEEE754 "default" rounding rules ( **Round to nearest** ) but ...
+
+... conform to rounding rules **Round down, or round toward minus infinity**
+
+https://www.keil.com/support/man/docs/armlib/armlib_chr1358938950865.htm
 
 =================================================================================
 
